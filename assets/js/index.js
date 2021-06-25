@@ -1,6 +1,6 @@
 var btn = document.getElementById('img')
 var angle = 0
-console.log('hello')
+
 anglePerFrame = 28
 function rotate() {
 
