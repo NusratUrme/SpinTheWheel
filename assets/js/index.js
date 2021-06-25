@@ -37,3 +37,5 @@ document.getElementById('img').onclick = () => {
 }
 
 var message = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date"]
+
+console.log("urme")
