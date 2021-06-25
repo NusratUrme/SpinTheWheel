@@ -35,4 +35,4 @@ document.getElementById('img').onclick = () => {
     initializeRotate(Math.floor(Math.random() * 20) + 20)
 }
 
-var message = ["", "Watch star and moon", "Oops nothing!", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date"]
+var message = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date"]

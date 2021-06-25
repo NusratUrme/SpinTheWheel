@@ -1,6 +1,6 @@
 #img{
-    height: 500px;
-    width: 500px;
+    height: 550px;
+    width: 550px;
     border-radius: 50%;
 }
 #pin {
@@ -8,8 +8,17 @@
     width: 100px;
     font-size: 700%;
     top: 36%;
-    left: 508px;
+    left: 958px;
+}
+#message {
+    text-align : center;
 }
 body{
     overflow: hidden;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
