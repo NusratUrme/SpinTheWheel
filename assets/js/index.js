@@ -23,6 +23,12 @@ function initializeRotate(x) {
     angle = 0
     rotate()
 }
+rotateInit()
+function rotateInit(){
+    btn.style.transform = `rotate(${angle}deg)`
+    angle %= 360; angle ++;
+    setTimeout(() => { rotateInit() }, 20)
+}
 function getResult() {
     var pointerAngle = (360 + (angle - 90)) % 360
     var cur = 12
