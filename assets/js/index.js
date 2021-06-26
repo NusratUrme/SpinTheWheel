@@ -15,11 +15,6 @@ function rotate(dir) {
     }
     else {
         render(message[getResult()])
-        setTimeout(() => {
-            shouldSlowRotate = 1
-            slowRotaion(Math.floor(Math.random() * 2))
-        }, 2500);
-
     }
 }
 function render(message) {
@@ -62,3 +57,8 @@ document.getElementById('img').onclick = () => {
 var message = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date"]
 
 console.log("urme")
+
+$('#myModal').on('hidden.bs.modal', function (e) {
+        shouldSlowRotate = 1
+        slowRotaion(Math.floor(Math.random() * 2))
+    })
