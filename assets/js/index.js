@@ -3,6 +3,7 @@ var angle = 0
 
 anglePerFrame = 28
 
+
 function rotate(dir) {
 
     if (anglePerFrame > 0) {
