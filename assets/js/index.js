@@ -3,9 +3,7 @@ var angle = 0
 
 anglePerFrame = 28
 
-
 function rotate(dir) {
-
     if (anglePerFrame > 0) {
         btn.style.transform = `rotate(${angle}deg)`
         angle %= 360;
@@ -18,7 +16,8 @@ function rotate(dir) {
     }
 }
 function render(message) {
-
+    var snd = new Audio('./assets/images/audio.mp3');
+    snd.play();
     document.getElementById("message").innerHTML = message
     $('#myModal').modal({ show: true })
 

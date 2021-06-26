@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/confetti.css">
 </head>
 
 <body>
@@ -16,6 +17,14 @@
     <img src="./assets/images/arrow4.png" id="pin">
     <div class="container">
 
+    <svg class="dn">
+        <defs>
+            <symbol id="svg-confetti">
+                <path fill="currentColor" d="M-.017 6.91L4.035.012l2.587 1.52L2.57 8.43z"></path>
+            </symbol>
+        </defs>
+    </svg>
+    
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
@@ -41,6 +50,8 @@
 </body>
 
 <script src="./assets/js/index.js">
+</script>
+<script src="./assets/js/confetti.js">
 </script>
 
 </html>

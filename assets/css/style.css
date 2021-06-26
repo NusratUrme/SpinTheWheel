@@ -11,10 +11,31 @@
     left: 958px;
 }
 #message {
-    text-align : center;
+    text-align: center;
+    font-size: 125%;
+}
+
+.modal-content { background: rgb(187, 229, 240) !important; }
+.btn-default {
+    background-color: #D27E81;  
+    color: rgb(187, 229, 240);
+    border-color: #C5585C;
+    font-size: 120%;
+}
+.btn-default:hover,  .open .dropdown-toggle.btn-default {
+    background-color: #D27E81;
+    color:rgb(187, 229, 240);
+    border-color: #C5585C;
+    font-size: 120%;
+}
+.close {
+    color: #D27E81;
+    opacity: 1;
 }
 body{
     overflow: hidden;
+    color: #D27E81;
+    font-family: Bradley Hand, cursive;
 }
 .center {
   display: block;
