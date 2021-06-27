@@ -17,6 +17,9 @@ function rotate(dir) {
         spinningSound.pause()
         spinningSound.currentTime = 0
         render(message[getResult()])
+        $('.text').click(function() {
+        $('.text').show(); 
+    });
     }
 }
 function render(message) {
@@ -26,7 +29,7 @@ function render(message) {
     snd.play();
     document.getElementById("message").innerHTML = message
     $('#myModal').modal({ show: true })
-
+    
 }
 function initializeRotate(x) {
     anglePerFrame = x
@@ -78,7 +81,7 @@ function fadeOutPOpupText(currentAlpha, currentFont) {
     if (currentAlpha > 0) {
         getel('popupHolder').style.background = `rgb(0,0,0,${currentAlpha})`
         getel('popupTxt').style.fontSize = `${currentFont}%`
-        currentAlpha -= 0.01
+        currentAlpha -= 0.03
         currentFont += 50
         setTimeout(() => {
             fadeOutPOpupText(currentAlpha, currentFont)
@@ -87,3 +90,16 @@ function fadeOutPOpupText(currentAlpha, currentFont) {
     else getel('popupHolder').style.display = 'none'
 }
 
+ $('.text').click(function() { //button click class name is myDiv
+    e.stopPropagation();
+ })
+
+ $(function(){
+    $('.text').click(function() {
+        $('.text').show(); 
+    });
+
+    $(document).click(function(){  
+        $('.text').hide(); //hide the button
+    });
+});

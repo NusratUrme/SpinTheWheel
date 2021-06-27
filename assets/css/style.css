@@ -14,16 +14,19 @@
     text-align: center;
     font-size: 125%;
 }
-
+#txt {
+    color: #00b7ff;
+    font-size: 300%;
+}
 .modal-content { background: rgb(187, 229, 240) !important; }
 .btn-default {
-    background-color: #D27E81;  
+    background-color: #d38285;  
     color: rgb(187, 229, 240);
     border-color: #C5585C;
     font-size: 120%;
 }
 .btn-default:hover,  .open .dropdown-toggle.btn-default {
-    background-color: #D27E81;
+    background-color: #cb6a6e;
     color:rgb(187, 229, 240);
     border-color: #C5585C;
     font-size: 120%;
@@ -52,7 +55,7 @@ body{
     height: 100vh;
     width: 100vw;
     background: rgb(0,0,0,0.7);
-    color: white;
+    color: #D27E81;
     z-index: 2000;
     white-space: nowrap
 }
