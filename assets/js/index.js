@@ -78,7 +78,7 @@ function fadeOutPOpupText(currentAlpha, currentFont) {
     if (currentAlpha > 0) {
         getel('popupHolder').style.background = `rgb(0,0,0,${currentAlpha})`
         getel('popupTxt').style.fontSize = `${currentFont}%`
-        currentAlpha -= 0.02
+        currentAlpha -= 0.015
         currentFont += 50
         setTimeout(() => {
             fadeOutPOpupText(currentAlpha, currentFont)
