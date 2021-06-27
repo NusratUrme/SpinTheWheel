@@ -20,7 +20,9 @@ function rotate(dir) {
     }
 }
 function render(message) {
-
+    getel('popupHolder').style.display = 'block'
+    getel('popupTxt').innerHTML = message
+    fadeOutPOpupText(1, 400)
     snd.play();
     document.getElementById("message").innerHTML = message
     $('#myModal').modal({ show: true })
@@ -68,3 +70,20 @@ $('#myModal').on('hidden.bs.modal', function (e) {
     snd.pause()
     snd.currentTime = 0
 })
+
+function getel(x) {
+    return document.getElementById(x)
+}
+function fadeOutPOpupText(currentAlpha, currentFont) {
+    if (currentAlpha > 0) {
+        getel('popupHolder').style.background = `rgb(0,0,0,${currentAlpha})`
+        getel('popupTxt').style.fontSize = `${currentFont}%`
+        currentAlpha -= 0.01
+        currentFont += 50
+        setTimeout(() => {
+            fadeOutPOpupText(currentAlpha, currentFont)
+        }, 20);
+    }
+    else getel('popupHolder').style.display = 'none'
+}
+
