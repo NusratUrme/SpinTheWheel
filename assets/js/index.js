@@ -1,7 +1,7 @@
 var btn = document.getElementById('img')
 var angle = 0
 
-anglePerFrame = 28
+anglePerFrame = 18
 var snd = new Audio('./assets/audios/audio.mp3');
 
 var spinningSound = new Audio('./assets/audios/euphoria.mp3')
@@ -59,7 +59,7 @@ function getResult() {
 }
 
 
-var message = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date"]
+var message = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date", "Spend a day", "Chocolates", "Photo together", "Netflix and chill", "Go for a vacation", "Icecream date", "Pizza ", "Warm tight hugs"]
 
 console.log("urme")
 
@@ -78,7 +78,7 @@ function fadeOutPOpupText(currentAlpha, currentFont) {
     if (currentAlpha > 0) {
         getel('popupHolder').style.background = `rgb(0,0,0,${currentAlpha})`
         getel('popupTxt').style.fontSize = `${currentFont}%`
-        currentAlpha -= 0.015
+        currentAlpha -= 0.03
         currentFont += 50
         setTimeout(() => {
             fadeOutPOpupText(currentAlpha, currentFont)
