@@ -39,7 +39,7 @@ body{
     overflow: hidden;
     color: #D27E81;
     font-family: Bradley Hand, cursive;
-    background: linear-gradient(55deg, yellow,10%,pink 30%,white);
+    background-image: url("../images/background.jpg");
 }
 .center {
   display: block;
