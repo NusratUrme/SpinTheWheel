@@ -2,7 +2,9 @@ var btn = document.getElementById('img')
 var angle = 0
 
 anglePerFrame = 28
+var snd = new Audio('./assets/audios/audio.mp3');
 
+var spinningSound = new Audio('./assets/audios/euphoria.mp3')
 function rotate(dir) {
     if (anglePerFrame > 0) {
         btn.style.transform = `rotate(${angle}deg)`
@@ -12,11 +14,13 @@ function rotate(dir) {
         setTimeout(() => { rotate(dir) }, 20)
     }
     else {
+        spinningSound.pause()
+        spinningSound.currentTime = 0
         render(message[getResult()])
     }
 }
 function render(message) {
-    var snd = new Audio('./assets/images/audio.mp3');
+
     snd.play();
     document.getElementById("message").innerHTML = message
     $('#myModal').modal({ show: true })
@@ -50,6 +54,7 @@ function getResult() {
 }
 document.getElementById('img').onclick = () => {
     shouldSlowRotate = 0
+    spinningSound.play()
     initializeRotate(Math.floor(Math.random() * 20) + 20)
 }
 
@@ -58,6 +63,8 @@ var message = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pil
 console.log("urme")
 
 $('#myModal').on('hidden.bs.modal', function (e) {
-        shouldSlowRotate = 1
-        slowRotaion(Math.floor(Math.random() * 2))
-    })
+    shouldSlowRotate = 1
+    slowRotaion(Math.floor(Math.random() * 2))
+    snd.pause()
+    snd.currentTime = 0
+})
