@@ -10,7 +10,7 @@ function rotate(dir) {
         btn.style.transform = `rotate(${angle}deg)`
         angle %= 360;
         dir ? angle += anglePerFrame : angle -= anglePerFrame;
-        anglePerFrame -= 0.1;
+        anglePerFrame -= 0.08;
         setTimeout(() => { rotate(dir) }, 20)
     }
     else {
@@ -46,6 +46,7 @@ function slowRotaion(dir) {
     setTimeout(() => { if (shouldSlowRotate) slowRotaion() }, 20)
 }
 function getResult() {
+    angle < 0 ? angle += 360 : angle += 0
     var pointerAngle = (360 + (angle - 90)) % 360
     var cur = messages.length - 1
     while (pointerAngle >= 18) {
@@ -56,7 +57,28 @@ function getResult() {
 }
 
 
-var messages = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date", "Spend a day", "Chocolates", "Photo together", "Netflix and chill", "Go for a vacation", "Icecream date", "Pizza ", "Warm tight hugs"]
+var messages = ["",
+    "Watch star and moon",
+    "Oops nothing! :(",
+    "Be forever",
+    "Pillow fights",
+    "Watch sunset",
+    "Workout together",
+    "Long drives",
+    "A night walk",
+    "Cuddles",
+    "Marry",
+    "Cook food",
+    "Dinner date",
+    "Spend a day",
+    "Chocolates",
+    "Photo together",
+    "Netflix and chill",
+    "Go for a vacation",
+    "Icecream date",
+    "Pizza ",
+    "Warm tight hugs"
+]
 
 
 
