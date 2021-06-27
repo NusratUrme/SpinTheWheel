@@ -17,9 +17,9 @@
     <img src="./assets/images/arrow.png" id="pin">
     <div class="container">
 
-        <h1 class="text" id="txt">
-            <p style="text-align : center;">Click to Spin</p>
-        </h1>
+        <div class="popupHolder" id="initialScreen">
+            <p class="popupTxt" style="color: white;">Click to Spin</p>
+        </div>
 
         <svg class="dn">
             <defs>
@@ -55,8 +55,8 @@
         </div>
 
     </div>
-    <div id="popupHolder" style="display: block;">
-        <div id="popupTxt">abcd</div>
+    <div class="popupHolder " id="popupHolder" style="display: none;">
+        <div id="popupTxt" class="popupTxt">abcd</div>
     </div>
 </body>
 

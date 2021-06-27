@@ -17,9 +17,9 @@ function rotate(dir) {
         spinningSound.pause()
         spinningSound.currentTime = 0
         render(message[getResult()])
-        $('.text').click(function() {
-        $('.text').show(); 
-    });
+        $('.text').click(function () {
+            $('.text').show();
+        });
     }
 }
 function render(message) {
@@ -29,14 +29,14 @@ function render(message) {
     snd.play();
     document.getElementById("message").innerHTML = message
     $('#myModal').modal({ show: true })
-    
+
 }
 function initializeRotate(x) {
     anglePerFrame = x
     angle = 0
     rotate(Math.floor(Math.random() * 2))
 }
-//slowRotaion(Math.floor(Math.random() * 2))
+slowRotaion(Math.floor(Math.random() * 2))
 var shouldSlowRotate = 1
 
 function slowRotaion(dir) {
@@ -57,11 +57,7 @@ function getResult() {
     }
     return cur
 }
-document.getElementById('img').onclick = () => {
-    shouldSlowRotate = 0
-    spinningSound.play()
-    initializeRotate(Math.floor(Math.random() * 20) + 20)
-}
+
 
 var message = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date"]
 
@@ -72,6 +68,7 @@ $('#myModal').on('hidden.bs.modal', function (e) {
     slowRotaion(Math.floor(Math.random() * 2))
     snd.pause()
     snd.currentTime = 0
+    getel('initialScreen').style.display = 'block'
 })
 
 function getel(x) {
@@ -81,7 +78,7 @@ function fadeOutPOpupText(currentAlpha, currentFont) {
     if (currentAlpha > 0) {
         getel('popupHolder').style.background = `rgb(0,0,0,${currentAlpha})`
         getel('popupTxt').style.fontSize = `${currentFont}%`
-        currentAlpha -= 0.03
+        currentAlpha -= 0.02
         currentFont += 50
         setTimeout(() => {
             fadeOutPOpupText(currentAlpha, currentFont)
@@ -90,16 +87,10 @@ function fadeOutPOpupText(currentAlpha, currentFont) {
     else getel('popupHolder').style.display = 'none'
 }
 
- $('.text').click(function() { //button click class name is myDiv
-    e.stopPropagation();
- })
+getel('initialScreen').onclick = () => {
+    getel('initialScreen').style.display = 'none'
+    shouldSlowRotate = 0
+    spinningSound.play()
+    initializeRotate(Math.floor(Math.random() * 20) + 20)
+}
 
- $(function(){
-    $('.text').click(function() {
-        $('.text').show(); 
-    });
-
-    $(document).click(function(){  
-        $('.text').hide(); //hide the button
-    });
-});
