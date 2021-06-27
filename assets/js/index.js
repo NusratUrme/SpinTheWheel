@@ -2,9 +2,15 @@ var btn = document.getElementById('img')
 var angle = 0
 
 anglePerFrame = 18
-var snd = new Audio('./assets/audios/audio.mp3');
+var messageAudio = new Audio('./assets/audios/audio.mp3');
 
-var spinningSound = new Audio('./assets/audios/euphoria.mp3')
+var spinAudio = new Audio('./assets/audios/spin.mp3');
+
+var euphoria = new Audio('./assets/audios/euphoria.mp3');
+
+$('#myModal').modal("hide")
+ 
+
 function rotate(dir) {
     if (anglePerFrame > 0) {
         btn.style.transform = `rotate(${angle}deg)`
@@ -14,8 +20,8 @@ function rotate(dir) {
         setTimeout(() => { rotate(dir) }, 20)
     }
     else {
-        spinningSound.pause()
-        spinningSound.currentTime = 0
+        spinAudio.pause()
+        spinAudio.currentTime = 0
         setTimeout(() => { render(messages[getResult()]) }, 500)
     }
 }
@@ -23,7 +29,9 @@ function render(message) {
     getel('popupHolder').style.display = 'block'
     getel('popupTxt').innerHTML = message
     fadeOutPOpupText(1, 400)
-    snd.play();
+    spinAudio.pause()
+    spinAudio.currentTime=0
+    messageAudio.play();
     document.getElementById("message").innerHTML = message
     $('#myModal').modal({ show: true })
 
@@ -85,8 +93,9 @@ var messages = ["",
 $('#myModal').on('hidden.bs.modal', function (e) {
     shouldSlowRotate = 1
     slowRotaion(Math.floor(Math.random() * 2))
-    snd.pause()
-    snd.currentTime = 0
+    messageAudio.pause()
+    messageAudio.currentTime = 0
+    euphoria.play()
     getel('initialScreen').style.display = 'block'
 })
 
@@ -109,7 +118,10 @@ function fadeOutPOpupText(currentAlpha, currentFont) {
 getel('initialScreen').onclick = () => {
     getel('initialScreen').style.display = 'none'
     shouldSlowRotate = 0
-    spinningSound.play()
+    euphoria.currentTime=0
+    euphoria.pause()
+    spinAudio.play()
+
     initializeRotate(Math.floor(Math.random() * 20) + 20)
 }
 
