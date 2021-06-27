@@ -16,7 +16,7 @@ function rotate(dir) {
     else {
         spinningSound.pause()
         spinningSound.currentTime = 0
-        setTimeout(() => { render(message[getResult()]) }, 500)
+        setTimeout(() => { render(messages[getResult()]) }, 500)
     }
 }
 function render(message) {
@@ -47,16 +47,16 @@ function slowRotaion(dir) {
 }
 function getResult() {
     var pointerAngle = (360 + (angle - 90)) % 360
-    var cur = message.length
+    var cur = messages.length - 1
     while (pointerAngle >= 18) {
         pointerAngle -= 18
         cur--
     }
-    return cur - 1
+    return cur
 }
 
 
-var message = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date", "Spend a day", "Chocolates", "Photo together", "Netflix and chill", "Go for a vacation", "Icecream date", "Pizza ", "Warm tight hugs"]
+var messages = ["", "Watch star and moon", "Oops nothing! :(", "Be forever", "Pillow fights", "Watch sunset", "Workout together", "Long drives", "A night walk", "Cuddles", "Marry", "Cook food", "Dinner date", "Spend a day", "Chocolates", "Photo together", "Netflix and chill", "Go for a vacation", "Icecream date", "Pizza ", "Warm tight hugs"]
 
 
 
