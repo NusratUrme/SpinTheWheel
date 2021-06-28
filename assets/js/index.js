@@ -41,7 +41,7 @@ function initializeRotate(x) {
     angle = 0
     rotate(Math.floor(Math.random() * 2))
 }
-slowRotaion(Math.floor(Math.random() * 2))
+//slowRotaion(Math.floor(Math.random() * 2))
 var shouldSlowRotate = 1
 
 function slowRotaion(dir) {
@@ -66,7 +66,7 @@ function getResult() {
 
 
 var messages = ["",
-    "Watch star and moon",
+    "Watch stars and moon",
     "Oops nothing! :(",
     "Be forever",
     "Pillow fights",

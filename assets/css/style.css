@@ -5,13 +5,11 @@
     position: absolute;
     left: -275px;
 }
-#holder{
-    margin-top: 10px;
-}
+
 #pin {
     position: absolute;
     width: 100px;
-    top: 42%;
+    top: 40%;
     left: 250px;
 }
 #message {
