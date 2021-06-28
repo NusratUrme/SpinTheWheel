@@ -2,13 +2,18 @@
     height: 550px;
     width: 550px;
     border-radius: 50%;
+    position: absolute;
+    left: -275px;
+}
+#holder{
+    margin-top: 10px;
 }
 #pin {
     position: absolute;
     width: 100px;
-    font-size: 700%;
+     
     top: 40%;
-    left: calc(50vw + 250px);
+    left: 250px 
 }
 #message {
     text-align: center;
@@ -36,7 +41,7 @@
     opacity: 1;
 }
 body{
-    overflow-x: hidden;
+    overflow: hidden;
     color: #D27E81;
     font-family: Bradley Hand, cursive;
     background-image: url("../images/background.jpg");

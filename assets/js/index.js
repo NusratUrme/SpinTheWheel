@@ -9,7 +9,7 @@ var spinAudio = new Audio('./assets/audios/spin.mp3');
 var rotationAudio = new Audio('./assets/audios/rotationAudio.mp3');
 
 $('#myModal').modal("hide")
- 
+
 
 function rotate(dir) {
     if (anglePerFrame > 0) {
@@ -30,7 +30,7 @@ function render(message) {
     getel('popupTxt').innerHTML = message
     fadeOutPOpupText(1, 400)
     spinAudio.pause()
-    spinAudio.currentTime=0
+    spinAudio.currentTime = 0
     messageAudio.play();
     document.getElementById("message").innerHTML = message
     $('#myModal').modal({ show: true })
@@ -118,7 +118,7 @@ function fadeOutPOpupText(currentAlpha, currentFont) {
 getel('initialScreen').onclick = () => {
     getel('initialScreen').style.display = 'none'
     shouldSlowRotate = 0
-    rotationAudio.currentTime=0
+    rotationAudio.currentTime = 0
     rotationAudio.pause()
     spinAudio.play()
 
