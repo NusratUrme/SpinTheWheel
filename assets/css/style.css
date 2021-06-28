@@ -36,7 +36,7 @@
     opacity: 1;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
     color: #D27E81;
     font-family: Bradley Hand, cursive;
     background-image: url("../images/background.jpg");
