@@ -118,6 +118,6 @@ getel('initialScreen').onclick = () => {
     rotationAudio.pause()
     spinAudio.play()
 
-    initializeRotate(Math.floor(Math.random() * 20) + 20)
+    initializeRotate(Math.floor(Math.random() * 25) + 25)
 }
 
