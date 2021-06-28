@@ -46,6 +46,6 @@ function confetti() {
 	$("body").append($confettiItems);
 }
 
-// $("#myModal").on("shown.bs.modal", function () {
-// 	confetti();
-// });
+$("#myModal").on("shown.bs.modal", function () {
+	confetti();
+});
