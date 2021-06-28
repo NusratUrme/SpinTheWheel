@@ -1,4 +1,4 @@
-# Lucky Spin Wheel
+# Lucky Spinning Wheel
 ## Table of contents
 * [General info](#general-info)
 * [How to play](#how-to-play)
