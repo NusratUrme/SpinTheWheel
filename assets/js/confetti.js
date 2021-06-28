@@ -6,7 +6,7 @@ function randomize(collection) {
 function confetti() {
 	$(".confetti").remove();
 	var $confettiItems = $('<div class="confetti"></div>'),
-		colors = ["#B6DcB6", "#FCB6D0", "#D2E9E1", "#F8DDA9"],
+		colors = ["#FF0000", "#056608", "	#0000FF", "#FFFF00"],
 		height = 6.6,
 		width = 6.6;
 
