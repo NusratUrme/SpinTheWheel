@@ -26,15 +26,18 @@ function rotate(dir) {
     }
 }
 function render(message) {
-    getel('popupHolder').style.display = 'block'
-    getel('popupTxt').innerHTML = message
-    fadeOutPOpupText(1, 400)
+
+
     spinAudio.pause()
     spinAudio.currentTime = 0
     messageAudio.play();
     document.getElementById("message").innerHTML = message
     $('#myModal').modal({ show: true })
-
+    setTimeout(() => {
+        getel('popupHolder').style.display = 'block';
+        getel('popupTxt').innerHTML = message;
+        fadeOutPOpupText()
+    }, 1000)
 }
 function initializeRotate(x) {
     anglePerFrame = x
@@ -102,17 +105,10 @@ $('#myModal').on('hidden.bs.modal', function (e) {
 function getel(x) {
     return document.getElementById(x)
 }
-function fadeOutPOpupText(currentAlpha, currentFont) {
-    if (currentAlpha > 0) {
-        getel('popupHolder').style.background = `rgb(0,0,0,${currentAlpha})`
-        getel('popupTxt').style.fontSize = `${currentFont}%`
-        currentAlpha -= 0.03
-        currentFont += 50
-        setTimeout(() => {
-            fadeOutPOpupText(currentAlpha, currentFont)
-        }, 20);
-    }
-    else getel('popupHolder').style.display = 'none'
+function fadeOutPOpupText() {
+    getel('popupTxt').style.animation = 'anim 2s ease-out'
+    setTimeout(() => { getel('popupHolder').style.display = 'none' }, 2000)
+
 }
 
 getel('initialScreen').onclick = () => {

@@ -61,14 +61,26 @@ body{
     background: rgb(0,0,0,0.7);
     color: #D27E81;
     z-index: 2000;
-    white-space: nowrap
+    white-space: nowrap;
+    
 }
+
 .popupTxt{
     
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 400%;
+    
     word-break: break-word !important;
+}
+@keyframes anim{
+  from{
+    opacity:1;
+    transform:scale3d(.1,.1,1);
+  }
+  to{
+    opacity:0;
+    transform:scale3d(20,20,10)
+  }
 }
