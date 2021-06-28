@@ -11,9 +11,8 @@
 #pin {
     position: absolute;
     width: 100px;
-     
-    top: 40%;
-    left: 250px 
+    top: 42%;
+    left: 250px;
 }
 #message {
     text-align: center;
