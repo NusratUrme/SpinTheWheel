@@ -12,7 +12,7 @@ function confetti() {
 
 	var scale, $confettiItem;
 
-	for (var i = 0; i < 600; i++) {
+	for (var i = 0; i < 150; i++) {
 		scale = Math.random() * 1.75 + 1;
 		$confettiItem = $(
 			"<svg class='confetti-item' width='" +
