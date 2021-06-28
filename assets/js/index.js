@@ -22,7 +22,7 @@ function rotate(dir) {
     else {
         spinAudio.pause()
         spinAudio.currentTime = 0
-        setTimeout(() => { render(messages[getResult()]) }, 500)
+        setTimeout(() => { render(messages[getResult()]) }, 800)
     }
 }
 function render(message) {
@@ -41,7 +41,7 @@ function initializeRotate(x) {
     angle = 0
     rotate(Math.floor(Math.random() * 2))
 }
-//slowRotaion(Math.floor(Math.random() * 2))
+slowRotaion(Math.floor(Math.random() * 2))
 var shouldSlowRotate = 1
 
 function slowRotaion(dir) {

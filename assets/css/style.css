@@ -9,8 +9,9 @@
 #pin {
     position: absolute;
     width: 100px;
-    top: 40%;
+    top: 275px;
     left: 250px;
+    transform: translateY(-50%);
 }
 #message {
     text-align: center;
