@@ -6,7 +6,7 @@ var messageAudio = new Audio('./assets/audios/audio.mp3');
 
 var spinAudio = new Audio('./assets/audios/spin.mp3');
 
-var euphoria = new Audio('./assets/audios/euphoria.mp3');
+var rotationAudio = new Audio('./assets/audios/rotationAudio.mp3');
 
 $('#myModal').modal("hide")
  
@@ -95,7 +95,7 @@ $('#myModal').on('hidden.bs.modal', function (e) {
     slowRotaion(Math.floor(Math.random() * 2))
     messageAudio.pause()
     messageAudio.currentTime = 0
-    euphoria.play()
+    rotationAudio.play()
     getel('initialScreen').style.display = 'block'
 })
 
@@ -118,8 +118,8 @@ function fadeOutPOpupText(currentAlpha, currentFont) {
 getel('initialScreen').onclick = () => {
     getel('initialScreen').style.display = 'none'
     shouldSlowRotate = 0
-    euphoria.currentTime=0
-    euphoria.pause()
+    rotationAudio.currentTime=0
+    rotationAudio.pause()
     spinAudio.play()
 
     initializeRotate(Math.floor(Math.random() * 20) + 20)
